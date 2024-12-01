@@ -7,6 +7,16 @@ const Bookshelf = () => {
     author: '',
   })
 
+  const handleInputChange = (event) => {
+    event.preventDefault()
+    setNewBook({...newBook, [event.target.name]:event.target.value})
+  }
+
+  const handleSumbit = (event) => {
+    event.preventDefault()
+    setBooks({title:'', author:''})
+  }
+
   return (
     <div className="bookshelfDiv">
       <div className="formDiv">
